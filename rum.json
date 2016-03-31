@@ -1,0 +1,322 @@
+{
+  "angularVersion": "1.5.0",
+  "customProperties": {
+    "watcherData": [
+      {
+        "text": "function $locationWatch() { var oldUrl = trimEmptyHash($browser.url()); var newUrl = trimEmptyHash($location.absUrl()); var oldState = $browser.state(); var currentReplace = $location.$$replace; var urlOrStateChanged = oldUrl !== newUrl || ($location.$$html5 && $sniffer.history && oldState !== $location.$$state); if (initializing || urlOrStateChanged) { initializing = false; $rootScope.$evalAsync(function() { var newUrl = $location.absUrl(); var defaultPrevented = $rootScope.$broadcast('$locationChangeStart', newUrl, oldUrl, $location.$$state, oldState).defaultPrevented; // if the location was changed by a `$locationChangeStart` handler then stop // processing this location change if ($location.absUrl() !== newUrl) return; if (defaultPrevented) { $location.$$parse(oldUrl); $location.$$state = oldState; } else { if (urlOrStateChanged) { setBrowserUrlWithFallback(newUrl, currentReplace, oldState === $location.$$state ? null : $location.$$state); } afterLocationChange(oldUrl, oldState); } }); } $location.$$replace = false; // we don't need to return anything because $evalAsync will make the digest loop dirty when // there is a change }",
+        "time": 0.03999999999996362,
+        "count": 2
+      },
+      {
+        "text": "{ selected: $ctrl.isSelected(hero) }",
+        "time": 0.03999999999950887,
+        "count": 10
+      },
+      {
+        "text": "function () { return routeParamsGetter(scope); }",
+        "time": 0.034999999999399733,
+        "count": 10
+      },
+      {
+        "text": "function regularInterceptedExpression(scope, locals, assign, inputs) { var value = useInputs && inputs ? inputs[0] : parsedExpression(scope, locals, assign, inputs); return interceptorFn(value, scope, locals); }",
+        "time": 0.02500000000009095,
+        "count": 12
+      },
+      {
+        "text": "function () { return $location.url(); }",
+        "time": 0.010000000000218279,
+        "count": 2
+      }
+    ]
+  },
+  "downloadSpeed": 1825,
+  "downloadSpeedUnit": "mb/s",
+  "guid": "53eecbce-85ef-4846-8840-308db0782880",
+  "location": {
+    "href": "http://localhost:3000/heroes",
+    "hash": "",
+    "hostname": "localhost"
+  },
+  "marks": [],
+  "measures": [],
+  "memory": {
+    "jsHeapSizeLimit": 1620000000,
+    "totalJSHeapSize": 29400000,
+    "usedJSHeapSize": 17100000
+  },
+  "navigation": {
+    "navigationStart": 1459391858680,
+    "unloadEventStart": 1459391858694,
+    "unloadEventEnd": 1459391858694,
+    "redirectStart": 0,
+    "redirectEnd": 0,
+    "fetchStart": 1459391858680,
+    "domainLookupStart": 1459391858680,
+    "domainLookupEnd": 1459391858680,
+    "connectStart": 1459391858680,
+    "connectEnd": 1459391858680,
+    "secureConnectionStart": 0,
+    "requestStart": 1459391858692,
+    "responseStart": 1459391858694,
+    "responseEnd": 1459391858694,
+    "domLoading": 1459391858704,
+    "domInteractive": 1459391858952,
+    "domContentLoadedEventStart": 1459391858952,
+    "domContentLoadedEventEnd": 1459391858953,
+    "domComplete": 1459391859106,
+    "loadEventStart": 1459391859106,
+    "loadEventEnd": 1459391859107
+  },
+  "resources": [
+    {
+      "name": "http://localhost:3000/styles.css",
+      "entryType": "resource",
+      "startTime": 124.09500000000001,
+      "duration": 9.545000000000002
+    },
+    {
+      "name": "http://localhost:3000/node_modules/angular/angular.js",
+      "entryType": "resource",
+      "startTime": 124.94500000000001,
+      "duration": 66.60500000000003
+    },
+    {
+      "name": "http://localhost:3000/node_modules/@angular/router/angular1/angular_1_router.js",
+      "entryType": "resource",
+      "startTime": 126.22500000000001,
+      "duration": 10.010000000000005
+    },
+    {
+      "name": "http://localhost:3000/node_modules/systemjs/dist/system.js",
+      "entryType": "resource",
+      "startTime": 127.23,
+      "duration": 7.984999999999999
+    },
+    {
+      "name": "http://localhost:3000/app/app.js",
+      "entryType": "resource",
+      "startTime": 128.645,
+      "duration": 7.8799999999999955
+    },
+    {
+      "name": "http://localhost:3000/app/dialog.js",
+      "entryType": "resource",
+      "startTime": 129.23000000000002,
+      "duration": 7.174999999999983
+    },
+    {
+      "name": "http://localhost:3000/app/crisis-center.js",
+      "entryType": "resource",
+      "startTime": 129.40500000000003,
+      "duration": 8.914999999999964
+    },
+    {
+      "name": "http://localhost:3000/app/heroes.js",
+      "entryType": "resource",
+      "startTime": 129.61,
+      "duration": 9.090000000000003
+    },
+    {
+      "name": "http://localhost:3000/browser-sync/browser-sync-client.2.11.2.js",
+      "entryType": "resource",
+      "startTime": 265.62,
+      "duration": 4.345000000000027
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrAngular1.js",
+      "entryType": "resource",
+      "startTime": 272.2,
+      "duration": 3.0650000000000546
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/Heimdallr.js",
+      "entryType": "resource",
+      "startTime": 327.845,
+      "duration": 4.6200000000000045
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrProvider.js",
+      "entryType": "resource",
+      "startTime": 328.755,
+      "duration": 4.4500000000000455
+    },
+    {
+      "name": "http://localhost:3000/browser-sync/socket.io/?EIO=3&transport=polling&t=LFAY8bQ",
+      "entryType": "resource",
+      "startTime": 355.65500000000003,
+      "duration": 9.965000000000032
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/PerformanceObject.js",
+      "entryType": "resource",
+      "startTime": 421.75,
+      "duration": 9.350000000000023
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/BrowserPerformance.js",
+      "entryType": "resource",
+      "startTime": 422.035,
+      "duration": 7.470000000000027
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrHttp.js",
+      "entryType": "resource",
+      "startTime": 422.39000000000004,
+      "duration": 9.029999999999973
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrErrors.js",
+      "entryType": "resource",
+      "startTime": 422.64500000000004,
+      "duration": 8.615000000000009
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrUiRouter.js",
+      "entryType": "resource",
+      "startTime": 423.00000000000006,
+      "duration": 9.509999999999991
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/Guid.js",
+      "entryType": "resource",
+      "startTime": 423.31,
+      "duration": 9.04000000000002
+    },
+    {
+      "name": "http://localhost:3000/browser-sync/socket.io/?EIO=3&transport=polling&t=LFAY8cf&sid=Je7naF6IYrsH1dDxAABe",
+      "entryType": "resource",
+      "startTime": 434.235,
+      "duration": 10.720000000000027
+    },
+    {
+      "name": "http://localhost:3000/browser-sync/socket.io/?EIO=3&transport=polling&t=LFAY8ci&sid=Je7naF6IYrsH1dDxAABe",
+      "entryType": "resource",
+      "startTime": 436.295,
+      "duration": 20.264999999999986
+    },
+    {
+      "name": "http://localhost:3000/app/bootstrap.js",
+      "entryType": "resource",
+      "startTime": 451.255,
+      "duration": 6.595000000000027
+    },
+    {
+      "name": "http://localhost:3000/styles.css",
+      "entryType": "resource",
+      "startTime": 503.19000000000005,
+      "duration": 2.5749999999999886
+    },
+    {
+      "name": "http://localhost:3000/node_modules/angular/angular.js",
+      "entryType": "resource",
+      "startTime": 3503.9200000000005,
+      "duration": 2.8600000000001273
+    },
+    {
+      "name": "http://localhost:3000/node_modules/@angular/router/angular1/angular_1_router.js",
+      "entryType": "resource",
+      "startTime": 3507.4100000000003,
+      "duration": 2.3600000000001273
+    },
+    {
+      "name": "http://localhost:3000/node_modules/systemjs/dist/system.js",
+      "entryType": "resource",
+      "startTime": 3510.2000000000003,
+      "duration": 2.1849999999999454
+    },
+    {
+      "name": "http://localhost:3000/app/app.js",
+      "entryType": "resource",
+      "startTime": 3512.76,
+      "duration": 2.1100000000001273
+    },
+    {
+      "name": "http://localhost:3000/app/dialog.js",
+      "entryType": "resource",
+      "startTime": 3515.2600000000007,
+      "duration": 2.619999999999891
+    },
+    {
+      "name": "http://localhost:3000/app/crisis-center.js",
+      "entryType": "resource",
+      "startTime": 3518.445,
+      "duration": 2.2950000000000728
+    },
+    {
+      "name": "http://localhost:3000/app/heroes.js",
+      "entryType": "resource",
+      "startTime": 3521.13,
+      "duration": 2.375
+    },
+    {
+      "name": "http://localhost:3000/browser-sync/browser-sync-client.2.11.2.js",
+      "entryType": "resource",
+      "startTime": 3523.9800000000005,
+      "duration": 2.7049999999994725
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrAngular1.js",
+      "entryType": "resource",
+      "startTime": 3527.105,
+      "duration": 2.9350000000004
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/Heimdallr.js",
+      "entryType": "resource",
+      "startTime": 3530.61,
+      "duration": 2.619999999999891
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrProvider.js",
+      "entryType": "resource",
+      "startTime": 3533.875,
+      "duration": 2.9650000000001455
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/PerformanceObject.js",
+      "entryType": "resource",
+      "startTime": 3540.3400000000006,
+      "duration": 2.7149999999996908
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/BrowserPerformance.js",
+      "entryType": "resource",
+      "startTime": 3543.565,
+      "duration": 2.880000000000109
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrHttp.js",
+      "entryType": "resource",
+      "startTime": 3546.88,
+      "duration": 3.1850000000004
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrErrors.js",
+      "entryType": "resource",
+      "startTime": 3550.5550000000003,
+      "duration": 2.7600000000002183
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/HeimdallrUiRouter.js",
+      "entryType": "resource",
+      "startTime": 3553.7950000000005,
+      "duration": 3.144999999999982
+    },
+    {
+      "name": "http://localhost:3000/heimdallr/src/app/Guid.js",
+      "entryType": "resource",
+      "startTime": 3557.4900000000007,
+      "duration": 2.2399999999997817
+    },
+    {
+      "name": "http://localhost:3000/app/bootstrap.js",
+      "entryType": "resource",
+      "startTime": 3565.17,
+      "duration": 1.9349999999999454
+    }
+  ],
+  "routeEvents": [],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36",
+  "watcherCount": 36,
+  "time": "2016-03-31T02:37:52.168Z"
+}

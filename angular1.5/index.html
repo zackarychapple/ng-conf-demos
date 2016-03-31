@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>Router Sample</title>
+    <link href="./styles.css" rel="stylesheet">
+
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/@angular/router/angular1/angular_1_router.js"></script>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/dialog.js"></script>
+    <script src="./app/crisis-center.js"></script>
+    <script src="./app/heroes.js"></script>
+</head>
+
+<body  ng-hint>
+<h1 class="title">Component Router</h1>
+<app></app>
+</body>
+<script>
+    System.config({
+        defaultJSExtensions: true,
+        depCache: {
+            'bootstrap': ['app/app']
+        }
+    });
+    System.import('heimdallr/src/app/HeimdallrAngular1').then(function () {
+        System.import('app/bootstrap').then(function () {
+        });
+    });
+</script>
+</html>
