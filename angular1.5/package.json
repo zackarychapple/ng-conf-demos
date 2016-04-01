@@ -14,6 +14,7 @@
     "angular": "1.5.0",
     "angular-hint": "^0.3.8",
     "debounce-on": "0.0.0",
+    "heimdallr": "^0.2.0",
     "systemjs": "^0.19.24"
   },
   "devDependencies": {
