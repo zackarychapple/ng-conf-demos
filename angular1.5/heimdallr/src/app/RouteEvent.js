@@ -1,6 +1,6 @@
 System.register([], function(exports_1) {
     "use strict";
-    var RouteEvent;
+    var RouteEvent, ComponentRouteEvent;
     return {
         setters:[],
         execute: function() {
@@ -10,6 +10,12 @@ System.register([], function(exports_1) {
                 return RouteEvent;
             }());
             exports_1("RouteEvent", RouteEvent);
+            ComponentRouteEvent = (function () {
+                function ComponentRouteEvent() {
+                }
+                return ComponentRouteEvent;
+            }());
+            exports_1("ComponentRouteEvent", ComponentRouteEvent);
         }
     }
 });

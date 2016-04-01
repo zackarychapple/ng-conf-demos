@@ -1,6 +1,6 @@
-System.register(["./PerformanceObject", "./BrowserPerformance", "./HeimdallrHttp", "./HeimdallrErrors", "./HeimdallrUiRouter", './Guid'], function(exports_1) {
+System.register(["./PerformanceObject", "./BrowserPerformance", "./HeimdallrHttp", "./HeimdallrErrors", "./HeimdallrUiRouter", "./HeimdallrNgComponentRouter", './Guid'], function(exports_1) {
     "use strict";
-    var PerformanceObject_1, BrowserPerformance_1, HeimdallrHttp_1, HeimdallrErrors_1, HeimdallrUiRouter_1, Guid_1;
+    var PerformanceObject_1, BrowserPerformance_1, HeimdallrHttp_1, HeimdallrErrors_1, HeimdallrUiRouter_1, HeimdallrNgComponentRouter_1, Guid_1;
     var ConfigObj, Heimdallr;
     return {
         setters:[
@@ -18,6 +18,9 @@ System.register(["./PerformanceObject", "./BrowserPerformance", "./HeimdallrHttp
             },
             function (HeimdallrUiRouter_1_1) {
                 HeimdallrUiRouter_1 = HeimdallrUiRouter_1_1;
+            },
+            function (HeimdallrNgComponentRouter_1_1) {
+                HeimdallrNgComponentRouter_1 = HeimdallrNgComponentRouter_1_1;
             },
             function (Guid_1_1) {
                 Guid_1 = Guid_1_1;
@@ -73,8 +76,11 @@ System.register(["./PerformanceObject", "./BrowserPerformance", "./HeimdallrHttp
                 };
                 Heimdallr.prototype.init = function (config) {
                     this.url = config.url;
-                    if (config.router == 'ui.router') {
+                    if (config.router === 'ui.router') {
                         this.router = new HeimdallrUiRouter_1.HeimdallrUiRouter(this.routeEventsArray, this.appendAndSend.bind(this), this.msg, this.$rootScope);
+                    }
+                    if (config.router === 'ngComponentRouter') {
+                        this.router = new HeimdallrNgComponentRouter_1.HeimdallrNgComponentRouter(this.routeEventsArray, this.appendAndSend.bind(this), this.msg, this.$rootScope);
                     }
                     if (config.intervalTime) {
                         this.intervalTime = config.intervalTime;

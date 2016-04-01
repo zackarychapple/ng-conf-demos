@@ -10,7 +10,8 @@ angular.module('app', ['ngComponentRouter', 'dialog', 'heroes', 'crisis-center',
     .run(['HeimdallrService', function (HeimdallrService) {
         HeimdallrService.init({
             url: '/monitoring/perf',
-            customProperties: {}
+            customProperties: {},
+            router: 'ngComponentRouter'
         });
         HSVC = HeimdallrService;
         var getWatcherData = function () {
@@ -20,6 +21,7 @@ angular.module('app', ['ngComponentRouter', 'dialog', 'heroes', 'crisis-center',
             return oldWatcherData
         };
         HeimdallrService.customFunctions.push(getWatcherData.bind(this));
+        HeimdallrService.router.bindRoutingEvents();
         HeimdallrService.performanceTest();
     }])
 
